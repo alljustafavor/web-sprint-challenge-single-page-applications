@@ -1,10 +1,15 @@
-import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Navbar from './Comps/Navbar';
+import Home from "./Comps/Home";
+import Form from "./Comps/Form";
 
 const App = () => {
   return (
     <>
-      <h1>Lambda Eats</h1>
-      <p>You can remove this code and create your own header</p>
+      <Routes>
+        <Route path="/"  element={<><Navbar /> <Home /></>} />
+        <Route path="/pizza" element={<><Navbar /> <Form /></>} />
+      </Routes>
     </>
   );
 };
