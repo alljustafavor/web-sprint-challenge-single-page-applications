@@ -22,7 +22,7 @@ const Home = props => {
             <section className="food-container">
                 
                 <div class="restaurant">
-                    <img src={require('./thabang-MRX9wQk4w7A-unsplash.jpg')} alt="picture of mcdonalds"/>
+                    <img src={require('./thabang-MRX9wQk4w7A-unsplash.jpg')} alt="mcdonalds"/>
                     <h3>McDonald's</h3>
                     <p>$ - American - Fast Food - Burgers</p>
                     <div class="delivery-info">
@@ -31,7 +31,7 @@ const Home = props => {
                     </div>
                 </div>
                 <div class="restaurant">
-                    <img src={require('./anna-pelzer-IGfIGP5ONV0-unsplash.jpg')} alt="picture of a salad"/>
+                    <img src={require('./anna-pelzer-IGfIGP5ONV0-unsplash.jpg')} alt="salad"/>
                     <h3>Sweet Greens</h3>
                     <p>$$$ - Healthy - Salads</p>
                     <div class="delivery-info">
