@@ -38,7 +38,8 @@ const App = () => {
   const postNewOrder = newOrder => {
     axios.post('https://reqres.in/api/orders', newOrder)
       .then(res => {
-        console.log(res.data);
+        console.log(res.data)
+        setFormValues(res.data);
       })
       .catch(err => {
         console.log(err)
@@ -47,9 +48,6 @@ const App = () => {
   }
 
   const inputChange = (name, value) => {
-    if (name === "topping") {
-      value = Array.isArray(value) ? value : [value];
-    }
     validate(name, value)
     setFormValues({
       ...formValues,
@@ -62,7 +60,7 @@ const App = () => {
       name: (formValues.name && formValues.name.trim()) || '',
       size: (formValues.size && formValues.size.trim()) || '',
       sauce: (formValues.sauce && formValues.sauce.trim()) || '',
-      topping: (formValues.topping && formValues.topping.trim()) || '',
+      topping: ['pepperoni', 'sausage', 'bacon', 'chicken'].filter(hob => formValues[hob]),
       special: formValues.special || ''
     }
     postNewOrder(newOrder)

@@ -21,9 +21,10 @@ const Form = props => {
     return (
         <form id="pizza-form" className="form-container" onSubmit={handleSubmit}>
             <h2>Name for Order</h2>
-            <div id="name-input" className="name-input">
+            <div className="name-input">
                 <label>
                     <input 
+                    id="name-input"
                     type="text"
                     placeholder="Name"
                     name="name"
@@ -33,9 +34,10 @@ const Form = props => {
             </div>
             {/* DROPDOWN */}
             <h2>Choice of Size</h2>
-            <div id="size-dropdown" className="dropdown">
+            <div className="dropdown">
                 <label>
                     <select
+                        id="size-dropdown"
                         onChange={handleChange}
                         value={values.size}
                         name='size'
@@ -129,10 +131,11 @@ const Form = props => {
                     />
                 </label>
             </div>
-            <div id="special-text" className="special-instructions">
+            <div className="special-instructions">
                 <h4>Special Instructions</h4>
                 <label>
                     <input 
+                        id="special-text"
                         type='text'
                         name='special'
                         placeholder='Special Instructions'
@@ -140,7 +143,7 @@ const Form = props => {
                     />
                 </label>
             </div>
-            <button>Add To Order</button>
+            <button id="order-button">Add To Order</button>
             <div className="errors">
                 <div>{errors.name}</div>
                 <div>{errors.sauce}</div>
