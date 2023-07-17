@@ -1,8 +1,10 @@
-/* --text: #f5e5e9;
---background: #070304;
---primary: #830b25;
---secondary: #34141b;
---accent: #be556c; */
+/* --text: #0a0a05;
+--background: #f2eed5;
+--primary: #c7d6ae;
+--secondary: #d6d9ea;
+--accent: #7052a3; */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 body {
   margin: 0;
@@ -11,8 +13,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #070304;
-  color: #f5e5e9;
+  background: #DEDEF7;
+  color: #0a0a05;
+  font-family: 'Montserrat', sans-serif;
+  width: 100vw;
 }
 
 code {
@@ -21,7 +25,7 @@ code {
 }
 
 h1 {
-margin: 1rem 2rem;
+margin: 1.5rem 2rem;
 font-size: 2rem;
 }
 
@@ -29,17 +33,119 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  color: #f5e5e9;
-  box-shadow: 0px 1px 5px #830b25;
+  color: #000000;
+  box-shadow: 0px 1px 10rem #afafff;
 }
 
-a {
+.nav-links-container a {
   text-decoration: none;
-  color: #f5e5e9;
-  padding: 4rem 1rem;
+  color: #000000;
+  padding-right: 4rem;
 }
 
-.drop-shadow-container {
-  filter: drop-shadow(10px 5px 10px #830b25);
-  width: 100%;
+.nav-links-container {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 2rem 5rem;
+  color: #000000;
+}
+
+
+.form-container {
+  width: 50%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+u {
+  text-decoration-color: #2E2ECC;
+  margin-top: 5rem;
+}
+
+.hero-img-container {
+  height: 50vh;
+  display: flex;
+  width: 100vw;
+  justify-content: space-evenly;
+  margin: 2rem 1rem;
+}
+
+img {
+  height: 50vh;
+  border-radius: 2%;
+}
+
+.hero-img-container button {
+  padding: 1rem 2rem;
+  background-color: #5959D9;
+  color: #FFFFFF;
+  border: 0px;
+  border-radius: 10px;
+  margin: 5rem 20rem;
+  font-size: 1rem;
+  font-weight: 700;
+  
+}
+
+.hero-img-container h1 {
+  margin-top: 4rem;
+}
+
+span {
+  color: #2E2ECC;
+}
+
+.food-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.restaurant {
+  margin-right: 20px;
+  text-align: left;
+}
+
+.delivery-info {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.delivery-info p {
+  margin-right: 10px;
+  background-color: #5959D9;
+  color: #FFFFFF;
+  padding: 0.5rem;
+  border: 2px solid #27278698;
+  border-radius: 0.5rem;
+}
+
+.restaurant {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurant h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  border-bottom: 0.2rem solid #2E2ECC;;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+  font-family: sans-serif;
+  text-align: left;
+}
+
+.restaurant img {
+  height: 16rem;
+  width: 24rem;
+}
+
+.nearby {
+  margin-left: 10rem;
 }

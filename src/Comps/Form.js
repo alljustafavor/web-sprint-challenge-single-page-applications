@@ -1,3 +1,4 @@
+import "../index.css";
 
 const Form = props => {
 
@@ -12,7 +13,7 @@ const Form = props => {
             {/* DROPDOWN */}
             <div className="size-dropdown">
                 <h2>Choice of Size</h2>
-                <label>Choice of Size
+                <label>
                     <select
                         onChange={handleChange}
                         // value={values.size}
@@ -73,6 +74,8 @@ const Form = props => {
             </div>
             {/* CHECKBOX */}
             <div className="topping-checkbox">
+                <h2>Choice your <u>Toppings</u></h2>
+                <p>max of 6 options</p>
                 <label>Pepperoni
                     <input 
                         name='pepperoni'
@@ -128,6 +131,7 @@ const Form = props => {
                     <input 
                         type='text'
                         name='special'
+                        placeholder='Special Instructions'
                         onChange={handleChange}
                     />
                 </label>

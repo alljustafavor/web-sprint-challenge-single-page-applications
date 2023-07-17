@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import './index.css';
 import Navbar from './Comps/Navbar';
 import Home from "./Comps/Home";
 import Form from "./Comps/Form";
