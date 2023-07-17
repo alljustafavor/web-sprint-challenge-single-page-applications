@@ -8,8 +8,9 @@ const Home = props => {
         <>
             <section className="hero-img-container">
                 <div>
-                    <h1>Your Favorite Food, Delivered While <span>Coding</span></h1>
-                    <button onClick={() => navigate("/pizza")}>Pizza ?</button>
+                    <h1>Your Favorite Food Delivered While <span class="highlight">Coding</span></h1>
+                    <button id="order-pizza" onClick={() => navigate("/pizza")}>Pizza ?</button>
+                    <button className="btn" onClick={() => navigate("/pizza")}>Much More</button>
                 </div>
                 <div>
                 <img src={require('./ivan-torres-MQUqbmszGGM-unsplash.jpg')} alt="pizza img" />
@@ -21,7 +22,7 @@ const Home = props => {
             <section className="food-container">
                 
                 <div class="restaurant">
-                    <img src={require('./thabang-MRX9wQk4w7A-unsplash.jpg')} />
+                    <img src={require('./thabang-MRX9wQk4w7A-unsplash.jpg')} alt="picture of mcdonalds"/>
                     <h3>McDonald's</h3>
                     <p>$ - American - Fast Food - Burgers</p>
                     <div class="delivery-info">
@@ -30,7 +31,7 @@ const Home = props => {
                     </div>
                 </div>
                 <div class="restaurant">
-                    <img src={require('./anna-pelzer-IGfIGP5ONV0-unsplash.jpg')} />
+                    <img src={require('./anna-pelzer-IGfIGP5ONV0-unsplash.jpg')} alt="picture of a salad"/>
                     <h3>Sweet Greens</h3>
                     <p>$$$ - Healthy - Salads</p>
                     <div class="delivery-info">
@@ -39,7 +40,7 @@ const Home = props => {
                     </div>
                 </div>
                 <div class="restaurant">
-                    <img src={require('./tr-jy4t6SY9Ax0-unsplash.jpg')} />
+                    <img src={require('./tr-jy4t6SY9Ax0-unsplash.jpg')} alt="starbucks building"/>
                     <h3>Starbucks</h3>
                     <p>$$ - Coffee - Breakfast & Brunch</p>
                     <div class="delivery-info">

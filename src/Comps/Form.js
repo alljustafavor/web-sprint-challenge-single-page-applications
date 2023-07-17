@@ -2,24 +2,45 @@ import "../index.css";
 
 const Form = props => {
 
-    const handleSubmit = () => {
+    const {
+        values,
+        submit,
+        change,
+        errors
+    } = props
 
+    const handleSubmit = evt => {
+        evt.preventDefault()
+        submit()
     }
-    const handleChange = () => {
-
+    const handleChange = evt => {
+        const { name, value, checked, type } = evt.target
+        const valueToUse = type === 'checkbox' ? checked : value
+        change(name, valueToUse)
     }
     return (
-        <form className="form-container" onSubmit={handleSubmit}>
+        <form id="pizza-form" className="form-container" onSubmit={handleSubmit}>
+            <h2>Name for Order</h2>
+            <div id="name-input" className="name-input">
+                <label>
+                    <input 
+                    type="text"
+                    placeholder="Name"
+                    name="name"
+                    onChange={handleChange}
+                    />
+                </label>
+            </div>
             {/* DROPDOWN */}
-            <div className="size-dropdown">
-                <h2>Choice of Size</h2>
+            <h2>Choice of Size</h2>
+            <div id="size-dropdown" className="dropdown">
                 <label>
                     <select
                         onChange={handleChange}
-                        // value={values.size}
+                        value={values.size}
                         name='size'
+                        className="dropdown-content"
                     >
-                        <option value=''>- Select an Size -</option>
                         <option value='8in'>8 Inch</option>
                         <option value='10in'>10 Inch</option>
                         <option value='12in'>12 Inch</option>
@@ -28,9 +49,9 @@ const Form = props => {
                 </label>
             </div>
             {/* Radio Btns */}
-
+            <h2>Choice of Sauce</h2>
             <div className="sauce-radio">
-                <h2>Choice of Sauce</h2>
+                
                 <label>Original Red
                     <input 
                         name='sauce'
@@ -38,7 +59,7 @@ const Form = props => {
                         type='radio'
                         data-cy="original"
                         onChange={handleChange}
-                        // checked={values.sauce === 'original'}
+                        checked={values.sauce === 'original'}
                     />
                 </label>
                 <label>Garlic Ranch
@@ -48,7 +69,7 @@ const Form = props => {
                         type='radio'
                         data-cy="garlic"
                         onChange={handleChange}
-                        // checked={values.sauce === 'garlic'}
+                        checked={values.sauce === 'garlic'}
                     />
                 </label>
                 <label>BBQ sauce
@@ -58,7 +79,7 @@ const Form = props => {
                         type='radio'
                         data-cy="BBQ"
                         onChange={handleChange}
-                        // checked={values.sauce === 'BBQ'}
+                        checked={values.sauce === 'BBQ'}
                     />
                 </label>
                 <label>Alfredo
@@ -68,19 +89,18 @@ const Form = props => {
                         type='radio'
                         data-cy="alfredo"
                         onChange={handleChange}
-                        // checked={values.sauce === 'alfredo'}
+                        checked={values.sauce === 'alfredo'}
                     />
                 </label>
             </div>
             {/* CHECKBOX */}
+            <h2>Choice your Toppings</h2>
             <div className="topping-checkbox">
-                <h2>Choice your <u>Toppings</u></h2>
-                <p>max of 6 options</p>
                 <label>Pepperoni
                     <input 
                         name='pepperoni'
                         type='checkbox'
-                        // checked={values.pepperoni}
+                        checked={!!values.pepperoni}
                         onChange={handleChange}
                     />
                 </label>
@@ -88,7 +108,7 @@ const Form = props => {
                     <input 
                         name='sausage'
                         type='checkbox'
-                        // checked={values.sausage}
+                        checked={!!values.sausage}
                         onChange={handleChange}
                     />
                 </label>
@@ -96,7 +116,7 @@ const Form = props => {
                     <input 
                         name='bacon'
                         type='checkbox'
-                        // checked={values.bacon}
+                        checked={!!values.bacon}
                         onChange={handleChange}
                     />
                 </label>
@@ -104,28 +124,12 @@ const Form = props => {
                     <input 
                         name='chicken'
                         type='checkbox'
-                        // checked={values.chicken}
-                        onChange={handleChange}
-                    />
-                </label>
-                <label>Green Pepper
-                    <input 
-                        name='greenPepper'
-                        type='checkbox'
-                        // checked={values.greenPepper}
-                        onChange={handleChange}
-                    />
-                </label>
-                <label>Extra Cheese
-                    <input 
-                        name='exCheese'
-                        type='checkbox'
-                        // checked={values.exCheese}
+                        checked={!!values.chicken}
                         onChange={handleChange}
                     />
                 </label>
             </div>
-            <div className="special-instructions">
+            <div id="special-text" className="special-instructions">
                 <h4>Special Instructions</h4>
                 <label>
                     <input 
@@ -137,6 +141,10 @@ const Form = props => {
                 </label>
             </div>
             <button>Add To Order</button>
+            <div className="errors">
+                <div>{errors.name}</div>
+                <div>{errors.sauce}</div>
+            </div>
         </form>
     )
 }

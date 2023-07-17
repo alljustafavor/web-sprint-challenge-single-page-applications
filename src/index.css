@@ -13,8 +13,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #DEDEF7;
-  color: #0a0a05;
+  background: #000D14;
+  color: #ffffff;
   font-family: 'Montserrat', sans-serif;
   width: 100vw;
 }
@@ -27,27 +27,41 @@ code {
 h1 {
 margin: 1.5rem 2rem;
 font-size: 2rem;
+transition: all 0.3s ease-in-out;
 }
+
+h1:hover {
+  margin: 1.5rem 2rem;
+  font-size: 2rem;
+  color: #FC7531;
+  }
 
 nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  color: #000000;
-  box-shadow: 0px 1px 10rem #afafff;
+  color: #FFFFFF;
+  /* box-shadow: 0px 100px 200rem #86B361; */
 }
 
 .nav-links-container a {
   text-decoration: none;
-  color: #000000;
+  color: #FFFFFF;
   padding-right: 4rem;
+}
+
+.nav-links-container a:nth-child(3) {
+  background-color: #FC7531;
+  padding: 1rem 2rem;
+  border-radius: 0.2rem;
+  width: ;
 }
 
 .nav-links-container {
   font-size: 1.1rem;
   font-weight: 700;
   margin: 2rem 5rem;
-  color: #000000;
+  color: #FFFFFF;
 }
 
 
@@ -79,15 +93,32 @@ img {
 }
 
 .hero-img-container button {
+  display: inline-block;
   padding: 1rem 2rem;
-  background-color: #5959D9;
+  background-color: #FC7531;
   color: #FFFFFF;
   border: 0px;
   border-radius: 10px;
-  margin: 5rem 20rem;
+  margin: 5rem 1.5rem;
   font-size: 1rem;
   font-weight: 700;
-  
+  width: 15rem;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.hero-img-container button:hover {
+  box-shadow: 0 0 10rem 0.1rem #011E2D;
+  transform: scale(115%);
+}
+
+.hero-img-container button:nth-child(3)  {
+  margin-right: 0.1rem;
+  background-color: #011E2D;
+}
+
+.hero-img-container button:nth-child(3):hover  {
+  margin-right: 0.1rem;
+  box-shadow: 0 0 10rem 0.1rem #FC7531;
 }
 
 .hero-img-container h1 {
@@ -95,18 +126,19 @@ img {
 }
 
 span {
-  color: #2E2ECC;
+  background: -webkit-linear-gradient(#FC7531, #F65504);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .food-container {
   display: flex;
   justify-content: space-evenly;
   align-items: flex-end;
-  margin-bottom: 20px;
 }
 
 .restaurant {
-  margin-right: 20px;
+  margin-right: 1rem;
   text-align: left;
 }
 
@@ -117,26 +149,26 @@ span {
 
 .delivery-info p {
   margin-right: 10px;
-  background-color: #5959D9;
+  background-color: #FC7531;
   color: #FFFFFF;
-  padding: 0.5rem;
-  border: 2px solid #27278698;
-  border-radius: 0.5rem;
+  border: 1px solid #F65504;
+  border-radius: 0.2rem;
+  padding: 0.3rem;
 }
 
 .restaurant {
-  margin-right: 20px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 1rem;
 }
 
 .restaurant h3 {
   font-size: 1.5rem;
   font-weight: 700;
-  margin-top: 2rem;
-  border-bottom: 0.2rem solid #2E2ECC;;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  border-bottom: 0.2rem solid #F65504;
   display: inline-block;
-  padding-bottom: 0.3rem;
   font-family: sans-serif;
   text-align: left;
 }
@@ -146,6 +178,90 @@ span {
   width: 24rem;
 }
 
+.restaurant p {
+  margin: 0.2rem;
+}
+
 .nearby {
   margin-left: 10rem;
+}
+/* FORM */
+
+.form-container {
+  height: 90vh;
+  width: 60%;
+  padding: 2rem;
+  justify-content: center;
+}
+
+.form-container button {
+  width: 20%;
+  height: 5%;
+  margin: 2rem 0rem;
+  border: 0;
+  border-radius: 0.3rem;
+}
+
+.form-container h2 {
+  background-color: #FC7531;
+  padding: 2rem;
+  width: 80%;
+  border-radius: 1rem;
+  border-bottom: 0.3rem solid #F65504;
+  border-right: 0.2rem solid #F65504;
+}
+
+.sauce-radio {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-gap: 0.9rem; 
+  width: 50%;
+  margin-left: 1rem;
+}
+
+.sauce-radio label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sauce-radio input[type="radio"] {
+  appearance: none; 
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #ffffff; 
+  outline: none;
+  cursor: pointer;
+}
+
+
+.sauce-radio input[type="radio"]:checked {
+  border-color: #F65504; 
+}
+
+.topping-checkbox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates two equal-width columns */
+  gap: 10px; /* Adds spacing between the checkboxes */
+  width: 50%;
+  margin-left: 1rem;
+}
+
+.topping-checkbox label {
+  display: flex; 
+  justify-content: space-between;
+}
+
+.topping-checkbox input[type="checkbox"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #FFFFFF;
+  outline: none;
+  cursor: pointer;
+  
+}
+
+.topping-checkbox input[type="checkbox"]:checked {
+  background-color: #F65504;
 }

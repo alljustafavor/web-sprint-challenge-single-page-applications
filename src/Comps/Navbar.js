@@ -7,6 +7,7 @@ const Navbar = props => {
             <div className="nav-links-container">
                 <a href="/">Home</a>
                 <a href="/help">Help</a>
+                <a href="/help">Sign In</a>
             </div>
         </nav>
     );
