@@ -21,7 +21,7 @@ code {
 }
 
 h1 {
-margin: 1.5rem 2rem;
+margin: 1.5rem 1rem;
 font-size: 2rem;
 transition: all 0.3s ease-in-out;
 }
@@ -55,7 +55,7 @@ nav {
 .nav-links-container {
   font-size: 1.1rem;
   font-weight: 700;
-  margin: 2rem 5rem;
+  margin: 2rem 0rem;
   color: #FFFFFF;
 }
 
@@ -282,30 +282,32 @@ span {
 
 @media only screen and (max-width: 600px) {
   nav h1{
-    font-size: 1.5rem;
-    width: 35%;
+    font-size: 1.0rem;
+    width: 40%;
     height: 0rem;
     margin-right: 0;
-    margin-left: 0.5rem;
+    margin-left: 1rem;
   }
 
   .nav-links-container a{
     font-size: 0.9rem;
     padding: 1rem;
-    width: 65%;
-    
+    width: 80%;
+    margin-right: 0;
   }
 
   .nav-links-container {
     margin-left: 0;
-    margin-right: 2rem;
+    margin-right: 0rem;
     margin-top: 1.5rem;
+  
   }
 
   .nav-links-container a:nth-child(3) {
     background-color: #FC7531;
     padding: 0.5rem 1rem;
     border-radius: 0.2rem;
+    margin-right: 0;
   }
 
   .hero-img-container {
@@ -335,4 +337,7 @@ span {
     margin-top: 4px;
   }
 
+  .food-container {
+    display: block;
+  }
 }
