@@ -7,16 +7,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background: #000D14;
   color: #ffffff;
   font-family: 'Montserrat', sans-serif;
   width: 100vw;
+  margin: 0;
+  padding: 0;
 }
 
 code {
@@ -54,7 +50,6 @@ nav {
   background-color: #FC7531;
   padding: 1rem 2rem;
   border-radius: 0.2rem;
-  width: ;
 }
 
 .nav-links-container {
@@ -264,4 +259,69 @@ span {
 
 .topping-checkbox input[type="checkbox"]:checked {
   background-color: #F65504;
+}
+
+
+@media only screen and (max-width: 1650px) {
+  .hero-img-container img {
+    height: 45vh;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .hero-img-container button {
+    margin-top: 2rem;
+    margin-right: 8px;
+    width: 10rem;
+  }
+  .hero-img-container img {
+    margin-top: 4rem;
+    height: 35vh;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  nav h1{
+    font-size: 1.5rem;
+    width: 35%;
+    height: 0rem;
+  }
+
+  .nav-links-container a{
+    font-size: 0.9rem;
+    padding: 1rem;
+    width: 65%;
+    
+  }
+
+  .nav-links-container {
+    margin-left: 0;
+    margin-right: 2rem;
+  }
+
+  .hero-img-container {
+    height: 50vh;
+    display: flex;
+    width: 100vw;
+    justify-content: space-evenly;
+    flex-direction: column-reverse;
+    margin-bottom: 6rem;
+  }
+  
+  .hero-img-container button {
+    margin: 1rem;
+  }
+
+  .hero-img-container img {
+    margin-top: 6rem; 
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    height: 39vh;
+    object-fit: cover;
+  }
+
+  .hero-img-container h1 {
+    margin-top: 4px;
+  }
 }

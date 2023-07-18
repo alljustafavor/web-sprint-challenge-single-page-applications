@@ -9,7 +9,7 @@ const Home = props => {
             <section className="hero-img-container">
                 <div>
                     <h1>Your Favorite Food Delivered While <span class="highlight">Coding</span></h1>
-                    <button id="order-pizza" onClick={() => navigate("/pizza")}>Pizza ?</button>
+                    <button id="order-pizza" className="btn" onClick={() => navigate("/pizza")}>Pizza ?</button>
                     <button className="btn" onClick={() => navigate("/pizza")}>Much More</button>
                 </div>
                 <div>
