@@ -285,6 +285,8 @@ span {
     font-size: 1.5rem;
     width: 35%;
     height: 0rem;
+    margin-right: 0;
+    margin-left: 0.5rem;
   }
 
   .nav-links-container a{
@@ -297,6 +299,13 @@ span {
   .nav-links-container {
     margin-left: 0;
     margin-right: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .nav-links-container a:nth-child(3) {
+    background-color: #FC7531;
+    padding: 0.5rem 1rem;
+    border-radius: 0.2rem;
   }
 
   .hero-img-container {
@@ -305,7 +314,8 @@ span {
     width: 100vw;
     justify-content: space-evenly;
     flex-direction: column-reverse;
-    margin-bottom: 6rem;
+    margin-bottom: 7rem;
+    margin-left: 0;
   }
   
   .hero-img-container button {
@@ -313,7 +323,7 @@ span {
   }
 
   .hero-img-container img {
-    margin-top: 6rem; 
+    margin-top: 3rem; 
     padding: 0;
     border: 0;
     border-radius: 0;
@@ -324,4 +334,5 @@ span {
   .hero-img-container h1 {
     margin-top: 4px;
   }
+
 }
