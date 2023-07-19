@@ -338,6 +338,7 @@ span {
   }
 
   .food-container {
-    display: block;
+    flex-direction: column;
+    align-items: center;
   }
 }
